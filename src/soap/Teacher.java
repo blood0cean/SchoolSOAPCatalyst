@@ -15,4 +15,9 @@ public interface Teacher {
 	
 	@WebMethod ArrayList<models.Teacher> getTeachers(@WebParam(name="getAll") String getAll);
 	
+	@WebMethod models.Teacher getTeacher(@WebParam(name="idTeacher") int idTeacher);
+
+	@WebMethod String updateTeacher(@WebParam(name="idTeacher") int idTeacher,
+			@WebParam(name="firstName") String firstName, 
+			@WebParam(name="lastName") String lastName);
 }
